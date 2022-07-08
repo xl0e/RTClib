@@ -258,6 +258,12 @@ public:
   */
   bool operator!=(const DateTime &right) const { return !(*this == right); }
 
+  /*!
+      @brief  Test if that DateTime object is valid.  
+      @return True if the object is valid
+  */
+  operator bool() const { return isValid(); }
+
 protected:
   uint8_t yOff; ///< Year offset from 2000
   uint8_t m;    ///< Month 1-12
